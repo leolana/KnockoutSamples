@@ -1,0 +1,10 @@
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\SchoolService.dll.config
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\SchoolService.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\SchoolService.pdb
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\EntityFramework.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\EntityFramework.xml
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\obj\Debug\SchoolService.csprojResolveAssemblyReference.cache
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\obj\Debug\SchoolService.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolService\obj\Debug\SchoolService.pdb

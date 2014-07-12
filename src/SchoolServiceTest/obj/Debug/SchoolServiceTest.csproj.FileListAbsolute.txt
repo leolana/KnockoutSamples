@@ -1,0 +1,8 @@
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\SchoolServiceTest.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\SchoolServiceTest.pdb
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\EntityFramework.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\EntityFramework.SqlServer.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\EntityFramework.xml
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\EntityFramework.SqlServer.xml
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\obj\Debug\SchoolServiceTest.dll
+C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\obj\Debug\SchoolServiceTest.pdb

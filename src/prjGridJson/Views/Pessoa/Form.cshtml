@@ -1,0 +1,83 @@
+﻿@model prjGridJson.Models.Student
+@{
+    ViewBag.Title = "Cadastro de Pessoas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @using (@Html.BeginForm("Save", "Pessoa", FormMethod.Post, new { id = "form", role = "form" }))
+    {
+        @Html.ValidationSummary(excludePropertyErrors: false, message: "", htmlAttributes: new { @class = "da-form-row" })
+        @Html.HiddenFor(model => model.StudentId)
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.StudentName, "Nome")
+                    @Html.TextBoxFor(model => model.StudentName, new { @class = "form-control input-sm", placeholder = "Nome", maxlength = "50" })
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.DateOfBirth, "Data de nascimento")
+                    @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "form-control input-sm", placeholder = "Data de Nascimento", maxlength = "50", data_bind = "masked: dateOfBirth, mask: '99/99/9999', datepicker: dateOfBirth" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Address, "Endereço")
+                    @Html.TextBoxFor(model => model.Address, new { @class = "form-control input-sm", placeholder = "Endereço", maxlength = "50" })
+                </div>
+            </div>
+        </div>
+        <div class="row">        
+            <div class="col-xs-6">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Phone)
+                    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control input-sm", placeholder = "Telefone", maxlength = "15", data_bind = "masked: phone, mask: '(99) 99999-9999'" })
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.CEP, "CEP")
+                    @Html.TextBoxFor(model => model.CEP, new { @class = "form-control input-sm", placeholder = "CEP", maxlength = "10", data_bind = "masked: cep, mask: '99999-999'" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-actions">
+                    <button id="btnSalvar" type="submit" class="btn btn-primary">Salvar</button>
+			        <button id="btnCancelar" type="button" class="btn btn-default">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="@Url.Content("~/assets/js/mask.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/pages/pessoa.form.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            app.pessoa_form.init({
+                elementos: {
+                    form: "#form",
+                    btnSalvar: "#btnSalvar",
+                    btnCancelar: "#btnCancelar"
+                },
+                campos: {
+                    id: "#StudentId",
+                    nome: "#StudentName",
+                    dataNasc: "#DateOfBirth",
+                    telefone: "#Phone",
+                    endereco: "#Address",
+                    cep: "#CEP"
+                }
+            });
+        });
+    </script>
+}
+

@@ -1,0 +1,41 @@
+﻿@model  prjGridJson.Models.Pessoa
+
+@{
+    ViewBag.Title = "Home";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<table id="grid"></table>
+<div id="pager"></div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqGrid")
+    <script src="@Url.Content("~/assets/js/pages/home.index.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            app.home_index.init({
+                grid: {
+                    id: '#grid',
+                    pager: '#pager',
+                    urlCarregaGrid: '@Url.Action("CarregaGrid", "Home")'
+                }
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+
