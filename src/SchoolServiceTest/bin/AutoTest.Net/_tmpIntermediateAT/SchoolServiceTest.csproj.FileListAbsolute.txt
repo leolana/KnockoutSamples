@@ -1,9 +1,0 @@
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\_tmpIntermediateAT\SchoolServiceTest.csprojResolveAssemblyReference.cache
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\_tmpIntermediateAT\SchoolServiceTest.dll
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\_tmpIntermediateAT\SchoolServiceTest.pdb
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\SchoolServiceTest.dll
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\SchoolServiceTest.pdb
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\EntityFramework.dll
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\EntityFramework.SqlServer.dll
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\EntityFramework.xml
-C:\Users\leonardo.lana\Dropbox\Projetos\ProjetoWCF\src\SchoolServiceTest\bin\AutoTest.Net\EntityFramework.SqlServer.xml
