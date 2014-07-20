@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjetoKnockout.Entities
 {
-    class PasteParameter
+    public class PasteParameter
     {
         public string Name { get; set; }
         public string Value { get; set; }
