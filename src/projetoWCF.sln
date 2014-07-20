@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAppHarbor", "HelloAppHarbor\HelloAppHarbor.csproj", "{CBF664CA-FB4A-449A-BBDC-D16D58BC2B1C}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoKnockout", "ProjetoKnockout\ProjetoKnockout.csproj", "{B3153CB5-BD66-45A9-BAB1-17185E9766E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CBF664CA-FB4A-449A-BBDC-D16D58BC2B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBF664CA-FB4A-449A-BBDC-D16D58BC2B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBF664CA-FB4A-449A-BBDC-D16D58BC2B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBF664CA-FB4A-449A-BBDC-D16D58BC2B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3153CB5-BD66-45A9-BAB1-17185E9766E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3153CB5-BD66-45A9-BAB1-17185E9766E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3153CB5-BD66-45A9-BAB1-17185E9766E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3153CB5-BD66-45A9-BAB1-17185E9766E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
