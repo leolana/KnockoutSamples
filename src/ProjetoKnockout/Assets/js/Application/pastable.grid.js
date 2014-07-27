@@ -1,24 +1,30 @@
-﻿var app;
-if (typeof app === "undefined") {
-    app = {};
-}
+﻿var app = {};
 
 app.pastable_grid = (function (my) {
     "use strict";
 
-    var ClipPastable = function (settingsColumn, text) {
-        var text = text;
-        var settings = settingsColumn;
-        var clipRows = [];
-        var columnNames = [];
-        var columnAttributes = []
+    var Enums = function () {
+        var ATTRIBUTE = {
+            ReadOnly: { value: "read" },
+            Write: { value: "write" }
+        },
+        TYPEDATA = {
+            Button: { type: "button" },
+            String: { type: "string" },
+            Number: { type: "number" }
+        };
+    },
+    ClipPastable = function (settings, text) {
+        var clipRows = [],
+            columnNames = [],
+            columnAttributes = [],
+            numberColumn = 0;
         this.error = "";
         this.arrayObjects = [];
-        var numberColumn = 0;
 
         this.identifyAttributesWriteColumns = function () {
             for (var columnName in settings) {
-                if (settings[columnName].readOrWrite === app.enums.ATTRIBUTE.Write) {
+                if (settings[columnName].readOrWrite === Enums.ATTRIBUTE.Write) {
                     var columnObj = settings[columnName].sName;
                     columnNames.push(columnObj);
                 }
@@ -32,7 +38,7 @@ app.pastable_grid = (function (my) {
         };
         this.countColumns = function () {
             /*for (var columnName in settings) {
-            if (settings[columnName].readOrWrite === app.enums.ATTRIBUTE.Write) {
+            if (settings[columnName].readOrWrite === Enums.ATTRIBUTE.Write) {
             numberColumn++;
             }
             }*/
@@ -58,7 +64,7 @@ app.pastable_grid = (function (my) {
         this.validationClipDatas = function () {
             for (var i = 0; i < clipRows.length - 1; i++) {
                 for (var j = 0; j < clipRows[i].length; j++) {
-                    if (settings[columnNames[j]].typeData === app.enums.TYPEDATA.Number && !clipRows[i][j].isNumber()) {
+                    if (settings[columnNames[j]].typeData === Enums.TYPEDATA.Number && !clipRows[i][j].isNumber()) {
                         this.error = "O valor da coluna " + settings[columnNames[j]].nameColumn + ": " + clipRows[i][j] + ", não está no formato correto."
                         return true;
                     }
@@ -97,12 +103,54 @@ app.pastable_grid = (function (my) {
 
             return true;
         };
+    },
+    init = function (options) {
+        var ClipPastable = new ClipPastable(options.settings, options.text);
+
     };
 
-    if (!my.ClipPastable) {
-        my.ClipPastable = ClipPastable;
+    if (!my.init) {
+        my.init = init;
     }
 
     return my;
 
-} (app.pastable_grid || {}));
+}(app.pastable_grid || {}));
+
+/*
+    Considerações do AD para a fauncionalidade pastable
+    Estudar os conceitos
+    http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
+    http://en.wikipedia.org/wiki/First-class_function
+    http://www.antiifcampaign.com/
+    E validar o código no jsLint
+    http://www.jslint.com/
+
+    Retornar este objeto
+    {
+	    operacao: {
+		    situacao: "sucesso",
+		    erro: {
+			    mensagem: "teste"
+		    }
+	    },
+	    clips: [
+	    ]
+    }
+    ------------------------
+
+    displayError: function(error) { boot... }
+
+    -------------------------------
+
+    clipable.init({
+
+	    columns: [ ... ],
+	    gridId: "",
+	    elementToPaste: "",
+	    displayError: function(error) {
+		    ///bootbox.alert(error);
+		    $("#div").text(error);
+	    }
+    });	
+*/
