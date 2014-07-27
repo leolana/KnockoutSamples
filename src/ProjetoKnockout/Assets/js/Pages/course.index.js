@@ -6,9 +6,34 @@ if (typeof app === "undefined") {
 app.course_index = (function (my) {
     "use strict";
 
-    var opt,
-        CourseViewModel = function () {
+    var grid,
+        CourseViewModel = function (coursesInitials) {
             var self = this;
+
+            self.courses = ko.observableArray(coursesInitials);
+            self.editCourse = function (course) {
+                window.location.href = grid.editUrl + "/" + course.CourseID;
+            };
+            self.removeCourse = function (course) {
+                
+                $.ajax({
+                    url: grid.deleteUrl,
+                    data: JSON.stringify({ id: course.CourseID }),
+                    contentType: 'application/json; charset=utf-8',
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.success) {
+                            self.courses.remove(course);
+                        } else {
+                            alert(data.message);
+                        }
+                    },
+                    error: function () {
+                        alert('error');
+                    }
+                });
+            };
         },
         PasteGrid = function () {
             $(document).on('paste', function (e) {
@@ -79,13 +104,21 @@ app.course_index = (function (my) {
                 }
             });
         },
+        LoadCoursesAjax = function () {
+            $.getJSON(grid.searchUrl, function (data) {
+                ko.applyBindings(new CourseViewModel(data));
+            });
+        },
         init = function (options) {
-            opt = options;
+            grid = options.grid;
             PasteGrid();
-            ko.applyBindings(new CourseViewModel());
+            LoadCoursesAjax();
         };
 
     if (!my.init) {
         my.init = init;
     }
+
+    return my;
+
 }(app.course_index || {}));
