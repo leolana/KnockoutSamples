@@ -8,7 +8,7 @@ using ProjetoKnockout.Entities.Mapping;
 
 namespace ProjetoKnockout.Entities
 {
-    class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
         //public DatabaseContext() : base()
         //{
