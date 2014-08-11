@@ -199,6 +199,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CourseFormViewModel.cs" />
     <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\StudentFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
